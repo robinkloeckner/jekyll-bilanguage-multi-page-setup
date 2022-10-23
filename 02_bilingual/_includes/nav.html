@@ -1,0 +1,14 @@
+<nav>
+  <a href="/index.html">index</a>
+  <a href="/legal.html">legal</a>
+
+  {% if page.lang == 'en' %}
+    {% assign translated = site.['de'] | where: "name", page.name %}
+  {% else %}
+    {% assign translated = site.['en'] | where: "name", page.name %}
+  {% endif %}
+
+  {% for item in translated %}
+    <a href="{{ base_url }}{{ item.url }}">{{ item.lang }}</a>
+  {% endfor %}
+</nav>

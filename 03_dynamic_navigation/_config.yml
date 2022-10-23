@@ -1,0 +1,12 @@
+baseurl: "/"
+url: "www.campusguru.de"
+
+collections:
+  en:
+    output: true
+  de:
+    output: true
+
+
+sass:
+  sass_dir: _sass
